@@ -1,6 +1,5 @@
 # USAGE
-# python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle \
-#	--detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
+# python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
 
 # import the necessary packages
 from imutils import paths
@@ -21,7 +20,7 @@ ap.add_argument("-d", "--detector", required=True,
 	help="D:/opencv-face-recognition/face_detection_model")
 ap.add_argument("-m", "--embedding-model", required=True,
 	help="D:/opencv-face-recognition/openface_nn4.small2.v1.t7")
-ap.add_argument("-c", "--confidence", type=float, default=0.5,
+ap.add_argument("-c", "--confidence", type=float, default=0.6,
 	help="70")
 args = vars(ap.parse_args())
 
